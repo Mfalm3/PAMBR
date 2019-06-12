@@ -14,7 +14,8 @@
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
-    "sweetalert2": "^8.11.7"
+    "sweetalert2": "^8.11.7",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -26,6 +27,9 @@
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2"
   }
