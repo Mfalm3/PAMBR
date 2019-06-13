@@ -2,6 +2,7 @@
 
 namespace Mfalm3\View;
 
+use Mfalm3\Config\Config;
 use eftec\bladeone\BladeOne;
 
 class Html
@@ -11,8 +12,8 @@ class Html
 
     public function __construct()
     {
-        $views = __DIR__ . '/../../res/views';
-        $cache = __DIR__ . '/../../res/cache';
+        $views = Config::PATH_TO_VIEWS;
+        $cache = Config::PATH_TO_VIEWS_CACHE;
         $this->blade = new BladeOne($views, $cache,BladeOne::MODE_AUTO);
     }
 
