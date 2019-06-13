@@ -4,3 +4,6 @@ res/cache/
 .vscode/
 testfile.txt
 vendor/
+res/logs/
+db/
+assets/*.xml
