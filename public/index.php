@@ -6,19 +6,18 @@ require __DIR__.'/../vendor/autoload.php';
 use Mfalm3\Router\Router;
 use Mfalm3\Router\Request;
 use Mfalm3\View\Html;
-use Mfalm3\Files\{Handler, Parser};
+use Mfalm3\Files\Handler;
 
 $router = new Router(new Request);
 $render = new Html();
-$parser = new Parser();
 
 $router->get('/', function() use ($render) {
     return $render->view('index');
 });
 
-$router->post('/uploads', function($request) use ($render, $parser) {
+$router->post('/uploads', function($request) use ($render) {
 
-    Handler::upload();
+    Handler::xmlToDB();
    return $render->redirect('/');
 });
 
