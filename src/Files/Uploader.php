@@ -11,6 +11,7 @@ class Uploader
     private $allowAll;
     private $maxSize;
     private $uploadName;
+    private $originalFileName;
     private $imageSeq;
     private $sameName;
     public $name = 'Uploader';
@@ -62,6 +63,14 @@ class Uploader
         return $fname;
     }
 
+    function setOriginalFileName($arg){
+        $this->originalFileName = $arg;
+    }
+
+    function getOriginalFileName(){
+        return $this->originalFileName;
+    }
+
     function setMessage($message){
         $this->errorMessage = $message;
     }
@@ -92,6 +101,8 @@ class Uploader
         $name   = $_FILES[$fileBrowse]["name"];
         $ext    = $this->getExtension($name);
 
+
+        $this->setOriginalFileName($name);
 
         if(!is_dir($this->destinationPath))
         {
